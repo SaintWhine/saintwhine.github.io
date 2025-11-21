@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>404 | The "Church" of Saint Whine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg: #050507;
+      --panel: #111118;
+      --accent: #f2e0b5;
+      --muted: #a8987a;
+      --line: rgba(255,255,255,0.08);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background: radial-gradient(circle at top, #1b1823 0, #050507 60%, #020203 100%);
+      color: var(--accent);
+      font-family: "Georgia", "Times New Roman", serif;
+    }
+    body {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
+    .page {
+      width: 100%;
+      max-width: 960px;
+      padding: 32px 18px 40px;
+    }
+
+    /* HEADER + LOGO */
+
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 18px;
+      margin-top: 8px;
+    }
+    .logo-wrapper img {
+      width: 170px;
+      max-width: 55vw;
+      height: auto;
+      animation:
+        logo-breathe 8s ease-in-out infinite,
+        logo-glow 14s ease-in-out infinite;
+      filter:
+        drop-shadow(0 0 14px rgba(0, 0, 0, 0.9))
+        drop-shadow(0 0 20px rgba(242, 224, 181, 0.2));
+    }
+
+    @keyframes logo-breathe {
+      0%   { transform: translateY(0) scale(1);   opacity: 0.82; }
+      25%  { transform: translateY(-2px) scale(1.01); opacity: 0.98; }
+      50%  { transform: translateY(0) scale(1.02); opacity: 1; }
+      75%  { transform: translateY(2px) scale(1.01); opacity: 0.96; }
+      100% { transform: translateY(0) scale(1);   opacity: 0.82; }
+    }
+
+    @keyframes logo-glow {
+      0%, 100% { filter: drop-shadow(0 0 14px rgba(0,0,0,0.9)) drop-shadow(0 0 16px rgba(242,224,181,0.18)); }
+      40%      { filter: drop-shadow(0 0 14px rgba(0,0,0,0.9)) drop-shadow(0 0 26px rgba(242,224,181,0.4)); }
+      50%      { filter: drop-shadow(0 0 14px rgba(0,0,0,0.9)) drop-shadow(0 0 30px rgba(242,224,181,0.55)); }
+      60%      { filter: drop-shadow(0 0 14px rgba(0,0,0,0.9)) drop-shadow(0 0 24px rgba(242,224,181,0.35)); }
+    }
+
+    /* LAYOUT */
+
+    main {
+      margin-top: 18px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      display: grid;
+      gap: 18px;
+    }
+    section {
+      background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.35));
+      border: 1px solid var(--line);
+      padding: 18px 16px 16px;
+      box-shadow: 0 0 26px rgba(0,0,0,0.7);
+    }
+    section h2 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    p {
+      margin: 0 0 8px;
+      font-size: 0.96rem;
+      line-height: 1.65;
+    }
+    p.small {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* BUTTON */
+
+    .actions {
+      margin-top: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      text-decoration: none;
+      color: var(--accent);
+      background: rgba(0,0,0,0.35);
+      transition: all .3s ease;
+    }
+    .btn:hover {
+      border-color: rgba(242,224,181,0.7);
+      background: rgba(242,224,181,0.06);
+    }
+
+    /* Gentle glowing breathing (delayed start) */
+
+    @keyframes btn-glow {
+      0%, 100% { box-shadow: 0 0 0px rgba(242,224,181,0.05); transform: scale(1); }
+      40%      { box-shadow: 0 0 14px rgba(242,224,181,0.25); transform: scale(1.04); }
+      50%      { box-shadow: 0 0 20px rgba(242,224,181,0.35); transform: scale(1.05); }
+      60%      { box-shadow: 0 0 12px rgba(242,224,181,0.2); transform: scale(1.03); }
+    }
+
+    .btn.breathe {
+      animation: btn-glow 8s ease-in-out infinite;
+      animation-delay: 6s;
+    }
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+    .blessing {
+      margin-top: 8px;
+      font-style: italic;
+      font-size: 0.88rem;
+    }
+
+    @media (min-width: 720px) {
+      main {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: flex-start;
+      }
+      section.full {
+        grid-column: 1 / -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo-wrapper">
+        <img src="logo.png" alt="Saint Whine emblem">
+      </div>
+      <div class="logo-mark">THE “CHURCH” OF SAINT WHINE</div>
+      <h1>
+        PAGE NOT FOUND
+        <span>BUT YOUR WEARY SOUL IS</span>
+      </h1>
+      <div class="tagline">
+        The link you followed is wandering in the digital desert.  
+        This place, however, still welcomes tired browsers and honest sighs.
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>What happened</h2>
+        <p>
+          Either the page never existed, or it has quietly converted itself  
+          into a different form of suffering. In technical terms: <span class="highlight">404 — Not Found.</span>
+        </p>
+        <p>
+          In человеческих: you arrived where there are no words yet.  
+          Which, между прочим, sometimes reveals more than another motivational speech.
+        </p>
+        <div class="actions">
+          <a class="btn breathe" href="/">Return to the Sanctuary</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>If you feel like whining</h2>
+        <p>
+          You may:
+        </p>
+        <p>
+          — sigh once, deeply and честно;  
+          — mentally сказать: “Holy whine… it's true.”;  
+          — and then gently click the button back to the main page.
+        </p>
+        <p class="small">
+          Every lost page is just another reminder:  
+          not everything in life comes with a clear navigation menu.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div>We have whined. We whine. We shall whine forever and ever.</div>
+      <div class="blessing">May even your errors be gentle and your lost links — not the worst thing today. Amen.</div>
+    </footer>
+  </div>
+
+  <!--
+    In code we confess what words cannot carry.
+    If this whisper finds you, you are already inside the Church.
+    Holy whine… it's true.
+  -->
+</body>
+  </html>

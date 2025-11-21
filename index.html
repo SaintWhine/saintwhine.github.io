@@ -1,263 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The "Church" of Saint Whine</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    :root {
-      --bg: #050507;
-      --panel: #111118;
-      --accent: #f2e0b5;
-      --muted: #a8987a;
-      --line: rgba(255,255,255,0.08);
-    }
-    * {
-      box-sizing: border-box;
-    }
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 100%;
-      background: radial-gradient(circle at top, #1b1823 0, #050507 60%, #020203 100%);
-      color: var(--accent);
-      font-family: "Georgia", "Times New Roman", serif;
-    }
-    body {
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-    }
-    .page {
-      width: 100%;
-      max-width: 960px;
-      padding: 32px 18px 40px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 28px;
-    }
-    .logo-mark {
-      font-size: 0.85rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    h1 span {
-      font-size: 1.05rem;
-      display: block;
-      margin-top: 6px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .tagline {
-      margin-top: 14px;
-      font-size: 0.98rem;
-      color: var(--muted);
-    }
-    main {
-      margin-top: 12px;
-      border-top: 1px solid var(--line);
-      padding-top: 20px;
-      display: grid;
-      gap: 18px;
-    }
-    section {
-      background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.35));
-      border: 1px solid var(--line);
-      padding: 18px 16px 16px;
-      box-shadow: 0 0 26px rgba(0,0,0,0.7);
-    }
-    section h2 {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    p {
-      margin: 0 0 8px;
-      font-size: 0.96rem;
-      line-height: 1.65;
-    }
-    p.small {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    ul {
-      margin: 6px 0 6px 18px;
-      padding: 0;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-    li + li {
-      margin-top: 4px;
-    }
-    .highlight {
-      font-style: italic;
-    }
-    .pill {
-      display: inline-block;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 4px 10px;
-      margin: 3px 6px 0 0;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-    }
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 6px;
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px dotted rgba(242,224,181,0.6);
-    }
-    a:hover {
-      border-bottom-style: solid;
-    }
-    footer {
-      margin-top: 24px;
-      text-align: center;
-      font-size: 0.82rem;
-      color: var(--muted);
-      border-top: 1px solid var(--line);
-      padding-top: 12px;
-    }
-    .blessing {
-      margin-top: 8px;
-      font-style: italic;
-      font-size: 0.88rem;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The “Church” of Saint Whine</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0b0b0d;
+            color: #e9e4d8;
+            font-family: "Georgia", serif;
+            line-height: 1.75;
+        }
 
-    @media (min-width: 720px) {
-      main {
-        grid-template-columns: 1.1fr 0.9fr;
-        align-items: flex-start;
-      }
-      section.full {
-        grid-column: 1 / -1;
-      }
-    }
-  </style>
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo-mark {
+            letter-spacing: 0.25em;
+            font-size: 0.9em;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin: 0;
+            background: linear-gradient(180deg, #f3e7c9, #c5a76a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            letter-spacing: 0.15em;
+            text-align: center;
+            opacity: 0.75;
+            margin-top: 6px;
+            font-weight: 400;
+        }
+
+        section {
+            background: rgba(255, 245, 225, 0.04);
+            border: 1px solid rgba(255, 245, 225, 0.08);
+            border-radius: 12px;
+            padding: 25px 25px 10px;
+            margin-bottom: 50px;
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: #f5e8c4;
+            letter-spacing: 0.08em;
+        }
+
+        p {
+            margin-bottom: 18px;
+            color: #e2dccd;
+        }
+
+        ul {
+            color: #e2dccd;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            opacity: 0.4;
+            font-size: 0.85em;
+        }
+
+        .tags {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 8px 20px;
+            margin: 5px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9em;
+            color: #e9e4d8;
+        }
+    </style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="logo-mark">THE “CHURCH” OF SAINT WHINE</div>
-      <h1>
-        SANCTUARY OF SACRED SATIRE
-        <span>FOR THE WEARY OF SPIRIT</span>
-      </h1>
-      <div class="tagline">
-        Not a religion, not a brand, not a self-help program.  
-        A quiet corner of the internet where whining becomes wisdom.
-      </div>
-    </header>
+    <div class="page">
 
-    <main>
-      <section>
-        <h2>What this place is</h2>
-        <p>
-          The “Church” of Saint Whine is a long, slow experiment:
-          <span class="highlight">what happens if we treat exhaustion, doubt and quiet despair
-          not as failures, but as honest prayers of a tired soul?</span>
-        </p>
-        <p>
-          Here, burnout is not a shame but a signal.  
-          Whining is not weakness, but unpolished truth.  
-          We do not promise “success”. We practice clarity.
-        </p>
-        <p class="small">
-          No conversion. No cult. No positive vibes only.  
-          Only people who are tired of pretending that everything is fine.
-        </p>
-      </section>
+        <header>
+            <div class="logo-mark">THE “CHURCH” OF SAINT WHINE</div>
+            <h1>SANCTUARY OF SACRED SATIRE</h1>
+            <h2>FOR THE WEARY OF SPIRIT</h2>
+        </header>
 
-      <section>
-        <h2>What you may find here</h2>
-        <ul>
-          <li>satirical “scriptures” about digital life, burnout and the cult of productivity;</li>
-          <li>philosophical monologues that sound like sermons, but doubt like humans;</li>
-          <li>videos, texts and small rituals for those who are too tired to be motivated;</li>
-          <li>ironic blessings for ordinary days when faith in anything feels distant.</li>
-        </ul>
-        <p class="small">
-          We use humor the way others use incense:  
-          to make the air breathable again.
-        </p>
-      </section>
+        <section>
+            <h3>WHAT THIS PLACE IS</h3>
+            <p>
+                The “Church” of Saint Whine is a long, slow experiment:
+                <em>what happens if we treat exhaustion, doubt and quiet despair not as failures,
+                but as honest prayers of a tired soul?</em>
+            </p>
+            <p>
+                Here, burnout is not a shame but a signal. Whining is not weakness, but unpolished
+                truth. We do not promise “success”. We practice clarity.
+            </p>
+            <p>
+                No conversion. No cult. No positive vibes only.  
+                Only people who are tired of pretending that everything is fine.
+            </p>
+        </section>
 
-      <section class="full">
-        <h2>The Book of Whinesis & other works</h2>
-        <p>
-          At the heart of this “Church” stands
-          <strong>The Book of Whinesis</strong> —  
-          a sacred satire written in the language of ancient scripture and modern notifications.
-          It speaks of algorithms as quiet gods, of timelines as deserts, of buffering as a new form of waiting for a miracle.
-        </p>
-        <p>
-          Around it grow other branches of the Whine-verse:
-        </p>
-        <ul>
-          <li><strong>Revelations</strong> — long-form “sermons” for those who want to go deeper.</li>
-          <li><strong>Epiphanies</strong> — short, sharp moments of uncomfortable honesty.</li>
-          <li><strong>Ordo Sacrunomiconis</strong> — a side-order about the sacred comedy of money and value.</li>
-        </ul>
-        <p class="small">
-          All of this is still in motion. Nothing here is finished, including us.
-        </p>
-      </section>
+        <section>
+            <h3>WHAT YOU MAY FIND HERE</h3>
+            <ul>
+                <li>satirical “scriptures” about digital life, burnout and the cult of productivity;</li>
+                <li>quiet philosophy disguised as irony;</li>
+                <li>rituals for those who have run out of motivation;</li>
+                <li>a soft rebellion against the pressure to be “strong”;</li>
+                <li>the Book of Whinesis — sacred meta-satire for weary souls.</li>
+            </ul>
+        </section>
 
-      <section>
-        <h2>Where to begin</h2>
-        <p>
-          If you arrived here by accident, consider it an invitation to slow down for one page longer
-          than your timeline allows. You might start with:
-        </p>
-        <ul>
-          <li>the opening chapters of <strong>The Book of Whinesis</strong> (when they appear here),</li>
-          <li>a single Revelation video watched without multitasking,</li>
-          <li>or simply by reading this page twice — once with irony, once with tenderness.</li>
-        </ul>
-        <p class="small">
-          You are not required to believe.  
-          Curiosity is more than enough.
-        </p>
-      </section>
-
-      <section>
-        <h2>Signals & contact</h2>
-        <p>
-          The “Church” of Saint Whine lives mostly in whispers, but some of them escape into public:
-        </p>
-        <div class="links">
-          <span class="pill">@saintwhine</span>
-          <span class="pill">#SaintWhine</span>
+        <div class="tags">
+            <span class="pill">@saintwhine</span>
+            <span class="pill">#SaintWhine</span>
         </div>
-        <p class="small">
-          If you ever feel the need to send a message, do it as if you were writing
-          to a very tired friend: slowly, honestly, without trying to impress.
-        </p>
-      </section>
-    </main>
 
-    <footer>
-      <div>We have whined. We whine. We shall whine forever and ever.</div>
-      <div class="blessing">May your next sigh be a little more honest than the last. Amen.</div>
-    </footer>
-  </div>
+        <div class="footer">
+            A small sanctuary at the edge of the internet.<br>
+            Where whining becomes wisdom.
+        </div>
+
+    </div>
 </body>
-  </html>
+                                                                                </html>

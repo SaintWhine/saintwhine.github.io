@@ -38,12 +38,43 @@
       margin-bottom: 28px;
     }
 
-    /* ЛОГОТИП */
+    /* ЛОГОТИП + АНИМАЦИЯ */
     .logo {
-      width: 180px;
+      width: 140px;
       height: auto;
       display: block;
-      margin: 0 auto 22px;
+      margin: 0 auto 16px;
+      opacity: 0;
+      transform: scale(0.82) translateY(-6px);
+      animation: logoFadeIn 1.5s ease-out 0.3s forwards;
+    }
+
+    @keyframes logoFadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.82) translateY(-6px);
+        filter: blur(2px);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1.03) translateY(0);
+        filter: blur(0);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    /* На случай, если у человека выключены анимации в системе */
+    @media (prefers-reduced-motion: reduce) {
+      .logo {
+        animation: none;
+        opacity: 1;
+        transform: none;
+        filter: none;
+      }
     }
 
     .logo-mark {
